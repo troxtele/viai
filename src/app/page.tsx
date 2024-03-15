@@ -12,8 +12,8 @@ export default function Home() {
     <>
       <TracingBeam>
         <Navbar />
-        <Vision />
         <Hero />
+        <Vision />
         <Device />
         <Cards />
       </TracingBeam>
