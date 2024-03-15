@@ -50,9 +50,10 @@ const content = [
     ),
   },
 ];
+
 export default function Vision() {
   return (
-    <section className="py-20">
+    <section>
       <StickyScroll content={content} />
     </section>
   );

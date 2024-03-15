@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import Image from "next/image";
 import React, {
   createContext,
   useState,
@@ -123,6 +122,7 @@ export const CardItem = ({
 
   useEffect(() => {
     handleAnimations();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMouseEntered]);
 
   const handleAnimations = () => {

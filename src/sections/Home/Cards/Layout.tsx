@@ -5,16 +5,14 @@ import cardImg from "@/assets/images/card.jpg";
 
 const card: CardType[] = [
   {
-    title: "Display module image and",
-    textEffect: "See clearly with Microoled Display",
+    title: "See clearly with Microoled Display",
     description: "Powered by Activelook",
     linkPage: "#",
     signup: "#",
     image: cardImg,
   },
   {
-    title: "Frames of the glasses image and",
-    textEffect: "Frames for premium comfort",
+    title: "Frames for premium comfort",
     description:
       "Can be used while on a jog in the park or sitting at the desk. With no wires to bother you!",
     linkPage: "#",
@@ -22,8 +20,7 @@ const card: CardType[] = [
     image: cardImg,
   },
   {
-    title: "Camera on the glasses and",
-    textEffect: "Prompt Vision AI with instant snapshots",
+    title: "Prompt Vision AI with instant snapshots",
     description:
       "Let your AI agent see what you see to help you instantaneously",
     linkPage: "#",

@@ -9,7 +9,6 @@ import Link from "next/link";
 export function Card({
   image,
   title,
-  textEffect,
   description,
   linkPage,
   signup,
@@ -18,7 +17,7 @@ export function Card({
     <CardContainer className="inter-var">
       <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.1] h-auto rounded-xl p-6 border  ">
         <CardItem translateZ="50" className="text-xl font-bold  text-white">
-          {title} <TextGenerateEffect words={textEffect} />
+          <TextGenerateEffect words={title} />
         </CardItem>
         <CardItem
           as="p"
