@@ -6,7 +6,7 @@ const words = "Vision AI welcomes you to the future";
 
 export default function Hero() {
   return (
-    <div className="h-screen w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+    <div className="h-screen w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md pt-20">
       <h1 className="text-3xl md:text-5xl lg:text-6xl max-w-[50rem] font-bold text-center text-white relative z-20">
         <TextGenerateEffect words={words} />
       </h1>
