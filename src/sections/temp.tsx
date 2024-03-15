@@ -74,25 +74,25 @@ function Nav({ className }: { className?: string }) {
             <ProductItem
               title="Algochurn"
               href="#"
-              src={cardImg}
+              src={cardImg.src}
               description="Prepare for tech interviews like never before."
             />
             <ProductItem
               title="Tailwind Master Kit"
               href="#"
-              src={cardImg}
+              src={cardImg.src}
               description="Production ready Tailwind css components for your next project"
             />
             <ProductItem
               title="Moonbeam"
               href="#"
-              src={cardImg}
+              src={cardImg.src}
               description="Never write from scratch again. Go from idea to blog in minutes."
             />
             <ProductItem
               title="Rogue"
               href="#"
-              src={cardImg}
+              src={cardImg.src}
               description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
             />
           </div>
