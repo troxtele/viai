@@ -6,6 +6,14 @@ import { CardBody, CardContainer, CardItem } from "@components/ui/3d-card";
 import { TextGenerateEffect } from "@components/ui/text-generate-effect";
 import Link from "next/link";
 
+type CardType = {
+  title: string;
+  description: string;
+  linkPage: string;
+  signup: string;
+  image: any; // replace 'any' with the actual type of your image
+};
+
 export function Card({
   image,
   title,

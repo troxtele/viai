@@ -3,6 +3,14 @@ import { Card } from "./Card";
 
 import cardImg from "@/assets/images/card.jpg";
 
+type CardType = {
+  title: string;
+  description: string;
+  linkPage: string;
+  signup: string;
+  image: any; // replace 'any' with the actual type of your image
+};
+
 const card: CardType[] = [
   {
     title: "See clearly with Microoled Display",
