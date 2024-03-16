@@ -67,36 +67,40 @@ export default function Navbar() {
     }
   });
   return (
-    <div
-      className={`fixed top-0 inset-x-0 mx-auto max-w-[80rem] z-50 transition-all duration-300 before:absolute before:inset-0 before:w-full before:h-full before:backdrop-blur-3xl text-xl ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-      }`}
-    >
-      <Menu setActive={setActive}>
-        <Link href="/" className="relative">
-          <Image
-            className="max-w-[5rem] h-full"
-            width={1243}
-            height={496}
-            src={logo.src}
-            alt="logo"
-          />
-        </Link>
-        <MenuItem setActive={setActive} active={active} item="Rediscover">
-          <div className="text-sm grid sm:grid-cols-2 gap-4 sm:gap-10 p-4">
-            {content.map((item, index) => (
-              <ProductItem
-                key={index}
-                title={item.title}
-                href={item.id}
-                src={item.src.src}
-                description="Prepare for tech interviews like never before."
-              />
-            ))}
-          </div>
-        </MenuItem>
-        <Button className="text-lg">Pre-order</Button>
-      </Menu>
+    <div className="nav flex justify-between md:justify-around py-4 px-4">
+      <Link href="/" className="relative flex justify-center items-center">
+        <Image
+          className="max-w-[5rem]"
+          width={1243}
+          height={496}
+          src={logo.src}
+          alt="logo"
+        />
+      </Link>
+
+      <div className="dummy w-full h-4  max-w-[10rem] sm:max-w-[15rem] md:max-w-[20rem] z-50 transition-all duration-300 text-xl"></div>
+      <div
+        className={`fixed top-4 left-[25%] xs:left-[25%] xs:max-w-[8rem] sm:inset-x-0 sm:mx-auto w-full max-w-[10rem] sm:max-w-[15rem] md:max-w-[20rem] z-50 transition-all duration-300 text-xl ${
+          visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+        }`}
+      >
+        <Menu setActive={setActive}>
+          <MenuItem setActive={setActive} active={active} item="Rediscover">
+            <div className="text-sm grid sm:grid-cols-2 gap-4 sm:gap-10 p-4">
+              {content.map((item, index) => (
+                <ProductItem
+                  key={index}
+                  title={item.title}
+                  href={item.id}
+                  src={item.src.src}
+                  description="Prepare for tech interviews like never before."
+                />
+              ))}
+            </div>
+          </MenuItem>
+        </Menu>
+      </div>
+      <Button className="text-lg">Pre-order</Button>
     </div>
   );
 }

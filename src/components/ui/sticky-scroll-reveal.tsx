@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import Image from "next/image";
 
 export const StickyScroll = ({
   content,
@@ -61,9 +62,26 @@ export const StickyScroll = ({
     >
       <div ref={ref} className="flex justify-center relative space-x-16">
         <div className="div relative flex items-start">
-          <div className="max-w-[46rem] space-y-8 sm:space-y-0">
+          <div className="max-w-[46rem]">
             {content.map((item, index) => (
-              <div id={item.id} key={item.title + index} className="sm:my-20 px-4">
+              <div
+                id={item.id}
+                key={item.title + index}
+                className="mb-10 sm:my-20 px-4"
+              >
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: activeCard === index ? 1 : 0.3,
+                  }}
+                  className="md:hidden overflow-hidden pb-4"
+                >
+                  <div className="wrap h-[15rem] rounded-md">
+                    {item.content}
+                  </div>
+                </motion.div>
                 <motion.h2
                   initial={{
                     opacity: 0,
@@ -82,7 +100,7 @@ export const StickyScroll = ({
                   animate={{
                     opacity: activeCard === index ? 1 : 0.3,
                   }}
-                  className="text-slate-300 max-w-sm mt-4 sm:mt-10"
+                  className="text-kg text-slate-300 max-w-sm mt-4 sm:mt-10"
                 >
                   {item.description}
                 </motion.p>
