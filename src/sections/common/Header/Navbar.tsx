@@ -2,23 +2,16 @@
 import React, { useState } from "react";
 
 import Link from "next/link";
+import Image from "next/image";
 
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import Button from "@components/ui/moving-border";
 
-import {
-  HoveredLink,
-  Menu,
-  MenuItem,
-  ProductItem,
-} from "@components/ui/navbar-menu";
+import { useScroll, useMotionValueEvent } from "framer-motion";
+
+import { Menu, MenuItem, ProductItem } from "@components/ui/navbar-menu";
 
 import cardImg from "@/assets/images/card.jpg";
-import { cn } from "@/utils/cn";
+import logo from "@/assets/images/logo.png";
 
 export default function Navbar() {
   const { scrollYProgress } = useScroll();
@@ -39,14 +32,22 @@ export default function Navbar() {
   });
   return (
     <div
-      className={`fixed top-5 inset-x-0 max-w-2xl mx-auto z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 mx-auto max-w-[80rem] z-50 transition-all duration-300 before:absolute before:inset-0 before:w-full before:h-full before:backdrop-blur-3xl text-xl ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
       }`}
     >
       <Menu setActive={setActive}>
-        <Link href="#">Logo</Link>
-        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+        <Link href="/" className="relative">
+          <Image
+            className="max-w-[5rem] h-full"
+            width={1243}
+            height={496}
+            src={logo.src}
+            alt="logo"
+          />
+        </Link>
+        <MenuItem setActive={setActive} active={active} item="Rediscover">
+          <div className="text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Algochurn"
               href="#"
@@ -73,49 +74,7 @@ export default function Navbar() {
             />
           </div>
         </MenuItem>
-        <Link href="#">Pre-order</Link>
-      </Menu>
-    </div>
-  );
-}
-
-function Nav({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null);
-  return (
-    <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
-    >
-      <Menu setActive={setActive}>
-        <Link href="#">Logo</Link>
-        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-            <ProductItem
-              title="Algochurn"
-              href="#"
-              src={cardImg.src}
-              description="Prepare for tech interviews like never before."
-            />
-            <ProductItem
-              title="Tailwind Master Kit"
-              href="#"
-              src={cardImg.src}
-              description="Production ready Tailwind css components for your next project"
-            />
-            <ProductItem
-              title="Moonbeam"
-              href="#"
-              src={cardImg.src}
-              description="Never write from scratch again. Go from idea to blog in minutes."
-            />
-            <ProductItem
-              title="Rogue"
-              href="#"
-              src={cardImg.src}
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-            />
-          </div>
-        </MenuItem>
-        <Link href="#">Pre-order</Link>
+        <Button className="text-lg">Pre-order</Button>
       </Menu>
     </div>
   );

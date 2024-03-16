@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
   motion,
   useAnimationFrame,
@@ -10,7 +11,7 @@ import {
 import { useRef } from "react";
 import { cn } from "@/utils/cn";
 
-export function Button({
+export default function Button({
   borderRadius = "1.75rem",
   children,
   as: Component = "button",
@@ -32,7 +33,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "bg-transparent relative text-xl  h-16 w-40 p-[1px] overflow-hidden ",
+        "bg-transparent relative text-xl h-12 w-40 p-[1px] overflow-hidden ",
         containerClassName
       )}
       style={{
@@ -54,9 +55,10 @@ export function Button({
         </MovingBorder>
       </div>
 
-      <div
+      <Link
+        href="/preorder"
         className={cn(
-          "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
+          "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-2xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
           className
         )}
         style={{
@@ -64,7 +66,7 @@ export function Button({
         }}
       >
         {children}
-      </div>
+      </Link>
     </Component>
   );
 }
