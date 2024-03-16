@@ -8,9 +8,6 @@ export function MacScroll() {
         title={
           <span>Let Vision AI agents automate tasks on your computer</span>
         }
-      
-        src={`/linear.webp`}
-        showGradient={false}
       />
     </div>
   );

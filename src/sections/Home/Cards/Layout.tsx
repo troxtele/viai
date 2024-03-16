@@ -2,6 +2,8 @@ import React from "react";
 import { Card } from "./Card";
 
 import cardImg from "@/assets/images/card.jpg";
+import cardOne from "@/assets/images/home/cards/card-1.jpeg";
+import cardTwo from "@/assets/images/home/cards/card-2.jpeg";
 
 type CardType = {
   title: string;
@@ -13,13 +15,13 @@ const card: CardType[] = [
   {
     title: "See clearly with Microoled Display",
     description: "Powered by Activelook",
-    image: cardImg,
+    image: cardOne,
   },
   {
     title: "Frames for premium comfort",
     description:
       "Can be used while on a jog in the park or sitting at the desk. With no wires to bother you!",
-    image: cardImg,
+    image: cardTwo,
   },
   {
     title: "Prompt Vision AI with instant snapshots",
