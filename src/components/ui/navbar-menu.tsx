@@ -95,7 +95,7 @@ export const ProductItem = ({
         width={140}
         height={70}
         alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
+        className="flex-shrink-0 rounded-md shadow-2xl h-full w-full"
       />
       <div>
         <h4 className="text-xl font-bold mb-1 text-white">{title}</h4>
