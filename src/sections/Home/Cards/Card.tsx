@@ -4,25 +4,16 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@components/ui/3d-card";
 import { TextGenerateEffect } from "@components/ui/text-generate-effect";
-import Link from "next/link";
 
 type CardType = {
   title: string;
   description: string;
-  linkPage: string;
-  signup: string;
   image: any; // replace 'any' with the actual type of your image
 };
 
-export function Card({
-  image,
-  title,
-  description,
-  linkPage,
-  signup,
-}: CardType) {
+export function Card({ image, title, description }: CardType) {
   return (
-    <CardContainer className="inter-var">
+    <CardContainer className="inter-var self-start">
       <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.1] h-auto rounded-xl p-6 border  ">
         <CardItem translateZ="50" className="text-xl font-bold  text-white">
           <TextGenerateEffect words={title} />
@@ -43,26 +34,6 @@ export function Card({
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
-          <CardItem
-            translateZ={20}
-            as={Link}
-            href={linkPage}
-            target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal text-white"
-          >
-            Try now →
-          </CardItem>
-          <CardItem
-            translateZ={20}
-            as="button"
-            href={signup}
-            target="__blank"
-            className="px-4 py-2 rounded-xl bg-black text-white text-xs font-bold"
-          >
-            Sign up
-          </CardItem>
-        </div>
       </CardBody>
     </CardContainer>
   );
