@@ -6,7 +6,7 @@ const words = "Vision AI welcomes you to the future";
 
 export default function Hero() {
   return (
-    <div className="min-h-screen w-full bg-black overflow-hidden rounded-md pt-44">
+    <div className="h-[500px] sm:min-h-screen w-full bg-black overflow-hidden rounded-md pt-44">
       <div className="container">
         <div className="wrapper flex flex-col items-center justify-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl max-w-[50rem] font-bold text-center text-white relative z-20">

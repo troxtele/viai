@@ -83,7 +83,7 @@ export default function Navbar() {
           />
         </Link>
         <MenuItem setActive={setActive} active={active} item="Rediscover">
-          <div className="text-sm grid sm:grid-cols-2 gap-10 p-4">
+          <div className="text-sm grid sm:grid-cols-2 gap-4 sm:gap-10 p-4">
             {content.map((item, index) => (
               <ProductItem
                 key={index}
