@@ -11,6 +11,7 @@ import visionFour from "@/assets/images/home/vision/vision-4.jpeg";
 const content = [
   {
     title: "Glasses",
+    id: "glasses",
     description:
       "Bring your vision to your AI agent to boost productivity for everyday tasks",
     content: (
@@ -27,6 +28,7 @@ const content = [
   },
   {
     title: "Running",
+    id: "running",
     description:
       "Vision AI can help motivate you reach short and long term goals in fitness",
     content: (
@@ -43,6 +45,7 @@ const content = [
   },
   {
     title: "Shopping",
+    id: "shopping",
     description:
       "Vision AI can suggest what can be the best food pairings for newer recipes and better diets",
     content: (
@@ -59,6 +62,7 @@ const content = [
   },
   {
     title: "Cooking",
+    id: "cooking",
     description: "Vision AI aids in getting just the right spice! Let it cook…",
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">

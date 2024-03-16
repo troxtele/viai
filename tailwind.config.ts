@@ -17,7 +17,12 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: "400px",
+        exs: "340px",
+      },
+    },
   },
   plugins: [addVariablesForColors],
 };

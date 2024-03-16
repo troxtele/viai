@@ -13,10 +13,46 @@ import { Menu, MenuItem, ProductItem } from "@components/ui/navbar-menu";
 import cardImg from "@/assets/images/card.jpg";
 import logo from "@/assets/images/logo.png";
 
+import visionOne from "@/assets/images/home/vision/vision-1.gif";
+import visionTwo from "@/assets/images/home/vision/vision-2.jpeg";
+import visionThree from "@/assets/images/home/vision/vision-3.jpeg";
+import visionFour from "@/assets/images/home/vision/vision-4.jpeg";
+
 export default function Navbar() {
   const { scrollYProgress } = useScroll();
   const [active, setActive] = useState<string | null>(null);
   const [visible, setVisible] = useState(true);
+
+  const content = [
+    {
+      title: "Glasses",
+      id: "#glasses",
+      description:
+        "Bring your vision to your AI agent to boost productivity for everyday tasks",
+      src: visionOne,
+    },
+    {
+      title: "Running",
+      id: "#running",
+      description:
+        "Vision AI can help motivate you reach short and long term goals in fitness",
+      src: visionTwo,
+    },
+    {
+      title: "Shopping",
+      id: "#shopping",
+      description:
+        "Vision AI can suggest what can be the best food pairings for newer recipes and better diets",
+      src: visionThree,
+    },
+    {
+      title: "Cooking",
+      id: "#cooking",
+      description:
+        "Vision AI aids in getting just the right spice! Let it cook…",
+      src: visionFour,
+    },
+  ];
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -48,30 +84,15 @@ export default function Navbar() {
         </Link>
         <MenuItem setActive={setActive} active={active} item="Rediscover">
           <div className="text-sm grid grid-cols-2 gap-10 p-4">
-            <ProductItem
-              title="Algochurn"
-              href="#"
-              src={cardImg.src}
-              description="Prepare for tech interviews like never before."
-            />
-            <ProductItem
-              title="Tailwind Master Kit"
-              href="#"
-              src={cardImg.src}
-              description="Production ready Tailwind css components for your next project"
-            />
-            <ProductItem
-              title="Moonbeam"
-              href="#"
-              src={cardImg.src}
-              description="Never write from scratch again. Go from idea to blog in minutes."
-            />
-            <ProductItem
-              title="Rogue"
-              href="#"
-              src={cardImg.src}
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-            />
+            {content.map((item, index) => (
+              <ProductItem
+                key={index}
+                title={item.title}
+                href={item.id}
+                src={item.src.src}
+                description="Prepare for tech interviews like never before."
+              />
+            ))}
           </div>
         </MenuItem>
         <Button className="text-lg">Pre-order</Button>

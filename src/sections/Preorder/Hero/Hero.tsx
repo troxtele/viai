@@ -25,9 +25,9 @@ import "swiper/css/navigation";
 
 export default function Hero() {
   return (
-    <main className="min-h-screen h-[calc(100vh+100px)] pt-32 preorder text-lg font-semibold text-stone-100">
+    <main className="min-h-screen pt-32 preorder text-lg font-semibold text-stone-100">
       <div className="container">
-        <div className="wrapper grid md:grid-cols-5 gap-4">
+        <div className="wrapper grid md:grid-cols-5 gap-10">
           {/* left */}
           <div className="left md:col-span-3 w-full flex justify-center items-start">
             <div className="slider bg-dark md:border border-white/10 md:px-4 md:rounded-xl overflow-hidden w-screen md:max-w-[45rem] -mx-4 md:mx-0">
@@ -71,10 +71,9 @@ export default function Hero() {
 
             <div className="content">
               <p>
-                Frame is designed to be worn as a pair of glasses with a suite
-                of AI capabilities out of the box. Whether your daily pair of
-                specs or workbench prototyping tool, Frame is ready for the
-                journey.
+                Powered by locally built generative AI models, V-LENS 1
+                revolutionizes the way you train and compete – at the speed of
+                sight.
               </p>
 
               <div className="selects mt-10 space-y-8">
@@ -88,7 +87,8 @@ export default function Hero() {
                     </a>
                   </div>
                   <p className="mt-4">
-                    Free shipping for preorders! First batch ships on April 15.
+                    Want another style? Contact us for more information on
+                    special requests!
                   </p>
                 </div>
               </div>

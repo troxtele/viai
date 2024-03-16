@@ -6,6 +6,7 @@ import Device from "@/sections/Home/Device/Layout";
 import Hero from "@/sections/Home/Hero/Hero";
 import Vision from "@/sections/Home/Vision/Layout";
 import TracingBeam from "@/sections/common/TracingBeam/TracingBeam";
+import Footer from "@/sections/common/Footer/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Vision />
         <Device />
         <Cards />
+        <Footer />
       </TracingBeam>
     </>
   );

@@ -4,6 +4,7 @@ import { Card } from "./Card";
 import cardImg from "@/assets/images/card.jpg";
 import cardOne from "@/assets/images/home/cards/card-1.jpeg";
 import cardTwo from "@/assets/images/home/cards/card-2.jpeg";
+import cardThree from "@/assets/images/home/cards/card-3.jpeg";
 
 type CardType = {
   title: string;
@@ -27,7 +28,7 @@ const card: CardType[] = [
     title: "Prompt Vision AI with instant snapshots",
     description:
       "Let your AI agent see what you see to help you instantaneously",
-    image: cardImg,
+    image: cardThree,
   },
 ];
 
