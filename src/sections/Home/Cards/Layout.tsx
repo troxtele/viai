@@ -37,7 +37,7 @@ export default function Cards() {
     <section className="pt-6 sm:pt-20">
       <div className="container">
         <div className="heading text-center text-4xl font-bold">
-          <h2>Cards</h2>
+          <h2>Features</h2>
         </div>
         <div className="cards grid md:grid-cols-2 lg:grid-cols-3 gap-6 pt-20">
           {card.map((item, index) => (

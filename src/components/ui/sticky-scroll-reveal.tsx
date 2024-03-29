@@ -67,7 +67,7 @@ export const StickyScroll = ({
               <div
                 id={item.id}
                 key={item.title + index}
-                className="mb-10 sm:my-20 px-4"
+                className="mb-10 lg:my-20 px-4"
               >
                 <motion.div
                   initial={{
@@ -76,23 +76,23 @@ export const StickyScroll = ({
                   animate={{
                     opacity: activeCard === index ? 1 : 0.3,
                   }}
-                  className="md:hidden overflow-hidden pb-4"
+                  className="lg:hidden overflow-hidden pb-4"
                 >
                   <div className="wrap h-[15rem] rounded-md">
                     {item.content}
                   </div>
                 </motion.div>
-                <motion.h2
+                {/* <motion.h2
                   initial={{
                     opacity: 0,
                   }}
                   animate={{
                     opacity: activeCard === index ? 1 : 0.3,
                   }}
-                  className="text-2xl font-bold text-slate-100"
+                  className="text-2xl font-bold text-slate-100 hidden lg:block"
                 >
                   {item.title}
-                </motion.h2>
+                </motion.h2> */}
                 <motion.p
                   initial={{
                     opacity: 0,
@@ -100,7 +100,9 @@ export const StickyScroll = ({
                   animate={{
                     opacity: activeCard === index ? 1 : 0.3,
                   }}
-                  className="text-kg text-slate-300 max-w-sm mt-4 sm:mt-10"
+                  className={`text-slate-300 max-w-sm mt-4 lg:mt-10 lg:text-xl ${
+                    index > 0 ? "lg:pt-20" : ""
+                  }`}
                 >
                   {item.description}
                 </motion.p>

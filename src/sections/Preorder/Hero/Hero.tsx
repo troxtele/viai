@@ -71,9 +71,9 @@ export default function Hero() {
 
             <div className="content">
               <p>
-                Powered by locally built generative AI models, V-LENS 1
-                revolutionizes the way you train and compete – at the speed of
-                sight.
+                250 AED reserves your piece, with the remaining balance of 1800
+                AED payable upon product availability, estimated within 6-8
+                months.
               </p>
 
               <div className="selects mt-10 space-y-8">
