@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
@@ -30,6 +28,7 @@ body {
   margin: auto;
   padding: 0 1rem;
   max-width: 85rem !important;
+  overflow: hidden;
 }
 @media screen and (min-width: 640px) {
   .container {
@@ -42,4 +41,17 @@ body {
     max-width: 1620px !important;
     padding: 0 3.5rem;
   }
+}
+
+/* bg gradient */
+.bgGradientBtn:hover span.price {
+  @apply bg-zinc-300 text-zinc-700;
+}
+
+select {
+  @apply p-2
+}
+
+select option {
+  @apply px-3
 }

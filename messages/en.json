@@ -1,0 +1,71 @@
+{
+  "hero": "Vision AI welcomes you to the future",
+
+  "vision": {
+    "one": "Bring your vision to your AI agent to boost productivity for everyday tasks",
+    "two": "Vision AI can help motivate you reach short and long term goals in fitness",
+    "three": "Vision AI can suggest what can be the best food pairings for newer recipes and better diets",
+    "four": "Vision AI aids in getting just the right spice! Let it cook…"
+  },
+
+  "device": {
+    "lamp": "But one more thing",
+    "mac": "Let Vision AI agents automate tasks on your computer"
+  },
+
+  "cards": {
+    "title": "Features",
+    "one": {
+      "title": "See clearly with Microoled Display",
+      "desc": "Powered by Activelook"
+    },
+    "two": {
+      "title": "Frames for premium comfort",
+      "desc": "Can be used while on a jog in the park or sitting at the desk. With no wires to bother you!"
+    },
+    "three": {
+      "title": "Prompt Vision AI with instant snapshots",
+      "desc": "Let your AI agent see what you see to help you instantaneously"
+    }
+  },
+  "tablet": {
+    "pera": "Ready",
+    "title": "to experience the future ?"
+  },
+
+  "gradientCard": {
+    "title": "V-LENS 1",
+    "desc": "Enhance your athletic experience with the V-LENS 1. Ideal for cycling, running, or horse riding, it features advanced photochromic lenses that adjust to changing light, providing optimal visibility and UV protection.",
+    "button": {
+      "text": "Pre-order now",
+      "price": "1800 AED"
+    }
+  },
+
+  "waitlist": {
+    "title": "Join the waitlist",
+    "input": {
+      "placeholder": "Email"
+    },
+    "button": "Join Waitlist"
+  },
+
+  "preorder": {
+    "title": "V-LENS 1",
+    "price": "AED 1800",
+    "duration": "Delivery estimated within 2 months",
+    "desc": "Powered by locally built generative AI models, V-LENS 1 revolutionizes the way you train and compete – at the speed of sight.",
+    "button": "PREORDER NOW",
+    "text": "Want another style? Contact us for more information on special requests!"
+  },
+
+  "header": {
+    "options": "Rediscover",
+    "preorder": "pre-order"
+  },
+
+  "footer": {
+    "desc": "Vision AI to boost the productivity of everyday tasks!",
+    "right": "© 2024 VIAI. All rights reserved."
+  }
+}

@@ -1,7 +1,10 @@
 import React from "react";
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations();
+
   return (
     <footer className="pt-12 sm:pt-20">
       <div className="container">
@@ -14,21 +17,12 @@ export default function Footer() {
             >
               <FaInstagram />
             </a>
-            <a
-              target="_blank"
-              className=" hover:text-stone-400 transition-all duration-300"
-              href="https://www.linkedin.com/company/viai/"
-            >
-              <FaLinkedin />
-            </a>
           </div>
 
           <div className="texts text-sm text-stone-400 pt-4 space-y-2 text-center">
-            <p>
-              Vision AI to boost the productivity of everyday tasks!
-            </p>
+            <p>{t("footer.desc")}</p>
 
-            <p>© 2024 VIAI. All rights reserved.</p>
+            <p>{t("footer.right")}</p>
           </div>
         </div>
       </div>

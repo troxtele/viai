@@ -2,15 +2,17 @@
 import React from "react";
 import { SparklesCore } from "@components/ui/sparkles";
 import { TextGenerateEffect } from "@components/ui/text-generate-effect";
-const words = "Vision AI welcomes you to the future";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations();
+
   return (
-    <div className="h-[500px] sm:min-h-screen w-full bg-black overflow-hidden rounded-md pt-28">
+    <div className="h-[500px] sm:min-h-screen w-full bg-black overflow-hidden rounded-md pt-40 sm:pt-52 md:pt-64">
       <div className="container">
         <div className="wrapper flex flex-col items-center justify-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl max-w-[50rem] font-bold text-center text-white relative z-20">
-            <TextGenerateEffect words={words} />
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-[50rem] font-bold text-center text-white relative z-20">
+            <TextGenerateEffect words={t("hero")} />
           </h1>
           <div className="w-[50rem] h-40 relative mt-6">
             {/* Gradients */}

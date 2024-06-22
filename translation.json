@@ -1,0 +1,22 @@
+{
+
+  "vision": {
+ 
+    "one": {
+      "title": "Glasses",
+      "desc": "Bring your vision to your AI agent to boost productivity for everyday tasks"
+    },
+    "two": {
+      "title": "Running",
+      "desc": "Vision AI can help motivate you reach short and long term goals in fitness"
+    },
+    "three": {
+      "title": "Shopping",
+      "desc": "Vision AI can suggest what can be the best food pairings for newer recipes and better diets"
+    },
+    "four": {
+      "title": "Cooking",
+      "desc": "Vision AI aids in getting just the right spice! Let it cook…"
+    }
+  }
+}

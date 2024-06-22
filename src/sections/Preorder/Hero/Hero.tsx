@@ -1,22 +1,19 @@
-import { useEffect, useState } from "react";
-
 import Image from "next/image";
 
 import "./style.css";
-
-import { IoIosArrowDown } from "react-icons/io";
-import { LuPlus, LuMinus } from "react-icons/lu";
 
 // Import images
 import glassOne from "@/assets/images/preorder/glass-1.jpeg";
 import glassTwo from "@/assets/images/preorder/glass-2.jpeg";
 import glassThree from "@/assets/images/preorder/glass-3.jpeg";
+import glassFour from "@/assets/images/preorder/glass-4.jpeg";
 
-const images = [glassOne, glassTwo, glassThree];
+const images = [glassOne, glassTwo, glassThree, glassFour];
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { useTranslations } from "next-intl";
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,6 +21,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export default function Hero() {
+  const t = useTranslations();
+
   return (
     <main className="min-h-screen pt-32 preorder text-lg font-semibold text-stone-100">
       <div className="container">
@@ -65,31 +64,27 @@ export default function Hero() {
           {/* right */}
           <div className="right md:col-span-2 space-y-5">
             <div className="heading space-y-5">
-              <h1 className="text-5xl font-bold">V-LENS 1</h1>
-              <p>AED 250.00</p>
+              <h1 className="text-5xl font-bold">{t("preorder.title")}</h1>
+              <p>{t("preorder.price")}</p>
             </div>
 
             <div className="content">
-              <p>
-                250 AED reserves your piece, with the remaining balance of 1800
-                AED payable upon product availability, estimated within 6-8
-                months.
+              <p className="pb-4 border-b border-white/30">
+                {t("preorder.duration")}
               </p>
+              <p className="mt-4">{t("preorder.desc")}</p>
 
               <div className="selects mt-10 space-y-8">
                 <div className="bottom">
                   <div className="btn">
                     <a
-                      href="https://buy.stripe.com/fZeg0N9me9lPfTi5kk"
+                      href="https://buy.stripe.com/eVabKxbum55zePe001"
                       className="text-center text-black bg-white w-full py-2.5 px-4 rounded-full uppercase font-semibold flex justify-center items-center"
                     >
-                      Preorder now
+                      {t("preorder.button")}
                     </a>
                   </div>
-                  <p className="mt-4">
-                    Want another style? Contact us for more information on
-                    special requests!
-                  </p>
+                  <p className="mt-4">{t("preorder.text")}</p>
                 </div>
               </div>
             </div>
